@@ -34,3 +34,11 @@ model Interview {
   user User @relation(fields: [userId], references: [id])
   job  Job  @relation(fields: [jobId], references: [id])
 }
+model CandidateProfile {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  fullName  String
+  skills    String?
+  resumeUrl String?
+  createdAt DateTime @default(now())
+}
