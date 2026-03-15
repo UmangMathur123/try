@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     if (search) {
       const s = search.toLowerCase();
       filtered = jobs.filter(
-        (j) =>
+        (j: any) =>
           j.title.toLowerCase().includes(s) ||
           j.description.toLowerCase().includes(s) ||
           j.requiredSkills.toLowerCase().includes(s)

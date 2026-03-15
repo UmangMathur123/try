@@ -140,7 +140,7 @@ async function handleNextQuestion(body: any) {
   }
 
   const stage = getNextStage(plan, currentIndex);
-  const previousQuestions = interview.questions.map((q) => q.text);
+  const previousQuestions = interview.questions.map((q: any) => q.text);
   const skills = (candidateSkills || job.requiredSkills.split(',').filter(Boolean));
 
   const questionData = generateQuestion(
@@ -236,8 +236,8 @@ async function handleComplete(body: any) {
   if (!interview) return NextResponse.json({ error: 'Interview not found' }, { status: 404 });
 
   const responses = interview.questions
-    .filter((q) => q.response)
-    .map((q) => ({
+    .filter((q: any) => q.response)
+    .map((q: any) => ({
       correctnessScore: q.response!.correctnessScore,
       depthScore: q.response!.depthScore,
       clarityScore: q.response!.clarityScore,
@@ -248,7 +248,7 @@ async function handleComplete(body: any) {
   const technicalScore = calculateTechnicalScore(responses);
   const communicationScore = calculateCommunicationScore(responses);
   // Use enhanced integrity scoring with flag types
-  const integrityScore = calculateIntegrityScore(interview.proctoringFlags.map(f => ({ type: f.type })));
+  const integrityScore = calculateIntegrityScore(interview.proctoringFlags.map((f: any) => ({ type: f.type })));
   const resumeMatchScore = interview.application.resumeMatchScore;
 
   const overallScore = calculateFinalScore(

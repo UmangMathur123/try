@@ -1,0 +1,86 @@
+﻿
+> interview-platform@0.1.0 build
+> next build
+
+node.exe : ΓÜá Warning: 
+Next.js inferred your 
+workspace root, but it may 
+not be correct.
+At C:\Program 
+Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (ΓÜá  
+   Warning: Ne...not be    
+ correct.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+ We detected multiple 
+lockfiles and selected the 
+directory of C:\Users\mathu
+\package-lock.json as the 
+root directory.
+ To silence this warning, 
+set `turbopack.root` in 
+your Next.js config, or 
+consider removing one of 
+the lockfiles if it's not 
+needed.
+   See https://nextjs.org/d
+ocs/app/api-reference/confi
+g/next-config-js/turbopack#
+root-directory for more 
+information.
+ Detected additional 
+lockfiles: 
+   * C:\Users\mathu\Desktop
+\Techup\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 5.6s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/api/jobs/route.ts
+:29:10
+Type error: Parameter 'j' 
+implicitly has an 'any' 
+type.
+
+[0m [90m 27 |[39m       
+[36mconst[39m s 
+[33m=[39m search[33m.[3
+9mtoLowerCase()[33m;[39m
+ [90m 28 |[39m       
+filtered [33m=[39m 
+jobs[33m.[39mfilter(
+[31m[1m>[22m[39m[90m 
+29 |[39m         (j) 
+[33m=>[39m
+ [90m    |[39m          
+[31m[1m^[22m[39m
+ [90m 30 |[39m           
+j[33m.[39mtitle[33m.[39
+mtoLowerCase()[33m.[39min
+cludes(s) [33m||[39m
+ [90m 31 |[39m           
+j[33m.[39mdescription[33
+m.[39mtoLowerCase()[33m.
+[39mincludes(s) 
+[33m||[39m
+ [90m 32 |[39m           
+j[33m.[39mrequiredSkills
+[33m.[39mtoLowerCase()[33
+m.[39mincludes(s)[0m
+Next.js build worker 
+exited with code: 1 and 
+signal: null

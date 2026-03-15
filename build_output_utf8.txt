@@ -1,0 +1,93 @@
+﻿
+> interview-platform@0.1.0 build
+> next build
+
+node.exe : ΓÜá Warning: 
+Next.js inferred your 
+workspace root, but it may 
+not be correct.
+At C:\Program 
+Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (ΓÜá  
+   Warning: Ne...not be    
+ correct.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+ We detected multiple 
+lockfiles and selected the 
+directory of C:\Users\mathu
+\package-lock.json as the 
+root directory.
+ To silence this warning, 
+set `turbopack.root` in 
+your Next.js config, or 
+consider removing one of 
+the lockfiles if it's not 
+needed.
+   See https://nextjs.org/d
+ocs/app/api-reference/confi
+g/next-config-js/turbopack#
+root-directory for more 
+information.
+ Detected additional 
+lockfiles: 
+   * C:\Users\mathu\Desktop
+\Techup\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 5.4s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/api/interview/rou
+te.ts:143:54
+Type error: Parameter 'q' 
+implicitly has an 'any' 
+type.
+
+[0m [90m 141 |[39m
+ [90m 142 |[39m   
+[36mconst[39m stage 
+[33m=[39m getNextStage(pl
+an[33m,[39m 
+currentIndex)[33m;[39m
+[31m[1m>[22m[39m[90m 
+143 |[39m   
+[36mconst[39m 
+previousQuestions 
+[33m=[39m interview[33m.
+[39mquestions[33m.[39mma
+p((q) [33m=>[39m q[33m.
+[39mtext)[33m;[39m
+ [90m     |[39m          
+                           
+                 
+[31m[1m^[22m[39m
+ [90m 144 |[39m   
+[36mconst[39m skills 
+[33m=[39m 
+(candidateSkills 
+[33m||[39m job[33m.[39m
+requiredSkills[33m.[39msp
+lit([32m','[39m)[33m.[3
+9mfilter([33mBoolean[39m)
+)[33m;[39m
+ [90m 145 |[39m
+ [90m 146 |[39m   
+[36mconst[39m 
+questionData [33m=[39m 
+generateQuestion([0m
+Next.js build worker 
+exited with code: 1 and 
+signal: null
